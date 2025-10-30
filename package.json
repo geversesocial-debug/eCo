@@ -1,0 +1,39 @@
+{
+  "name": "eco-all-in-one",
+  "version": "1.0.0",
+  "description": "An all-in-one application that connects all your accounts - eCo Agency Marketing ESG Social Impact",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "client": "npm start --prefix client",
+    "server": "nodemon server/index.js",
+    "build": "npm run build --prefix client",
+    "install-all": "npm install && cd client && npm install",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "all-in-one",
+    "social-media",
+    "account-integration",
+    "marketing",
+    "esg",
+    "social-impact"
+  ],
+  "author": "eCo Agency",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-facebook": "^3.0.0",
+    "passport-linkedin-oauth2": "^2.0.0",
+    "passport-twitter": "^1.0.4",
+    "express-session": "^1.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
