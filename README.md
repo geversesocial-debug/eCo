@@ -39,6 +39,23 @@ eCo All-in-One is a comprehensive platform that allows you to connect and manage
 - React Router
 - Modern CSS with responsive design
 
+## 🔒 Security Considerations
+
+### For Development/Demo
+This application is configured for development and demonstration purposes. Before deploying to production, consider implementing:
+
+1. **Rate Limiting**: Add rate limiting middleware (e.g., `express-rate-limit`) to prevent abuse
+2. **CSRF Protection**: Implement CSRF tokens (e.g., `csurf` middleware) for form submissions
+3. **Database**: Replace in-memory storage with a proper database
+4. **Environment Security**: Use strong session secrets and secure environment variable management
+5. **HTTPS**: Always use HTTPS in production
+6. **OAuth Scope Validation**: Carefully review and minimize OAuth scopes
+
+### Recommended Security Packages
+```bash
+npm install express-rate-limit csurf helmet
+```
+
 ## 📦 Installation
 
 ### Prerequisites
