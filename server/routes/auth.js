@@ -10,8 +10,8 @@ router.get('/google',
 router.get('/google/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
   (req, res) => {
-    // Successful authentication
-    res.redirect(process.env.CLIENT_URL || 'http://localhost:3000/dashboard');
+    // Successful authentication - redirect to home
+    res.redirect(process.env.CLIENT_URL || 'http://localhost:3000');
   }
 );
 
@@ -23,8 +23,8 @@ router.get('/facebook',
 router.get('/facebook/callback',
   passport.authenticate('facebook', { failureRedirect: '/login' }),
   (req, res) => {
-    // Successful authentication
-    res.redirect(process.env.CLIENT_URL || 'http://localhost:3000/dashboard');
+    // Successful authentication - redirect to home
+    res.redirect(process.env.CLIENT_URL || 'http://localhost:3000');
   }
 );
 
@@ -36,8 +36,8 @@ router.get('/linkedin',
 router.get('/linkedin/callback',
   passport.authenticate('linkedin', { failureRedirect: '/login' }),
   (req, res) => {
-    // Successful authentication
-    res.redirect(process.env.CLIENT_URL || 'http://localhost:3000/dashboard');
+    // Successful authentication - redirect to home
+    res.redirect(process.env.CLIENT_URL || 'http://localhost:3000');
   }
 );
 
@@ -49,8 +49,8 @@ router.get('/twitter',
 router.get('/twitter/callback',
   passport.authenticate('twitter', { failureRedirect: '/login' }),
   (req, res) => {
-    // Successful authentication
-    res.redirect(process.env.CLIENT_URL || 'http://localhost:3000/dashboard');
+    // Successful authentication - redirect to home
+    res.redirect(process.env.CLIENT_URL || 'http://localhost:3000');
   }
 );
 

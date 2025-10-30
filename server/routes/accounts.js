@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-// In-memory storage for connected accounts (in production, use a database)
+// In-memory storage for connected accounts
+// NOTE: This is for development/demo purposes only. 
+// In production, use a proper database (MongoDB, PostgreSQL, etc.)
 let connectedAccounts = [];
 
 // Middleware to check if user is authenticated

@@ -26,9 +26,9 @@ module.exports = function(passport) {
         const user = {
           provider: 'google',
           id: profile.id,
-          email: profile.emails[0].value,
+          email: profile.emails && profile.emails[0] ? profile.emails[0].value : null,
           name: profile.displayName,
-          photo: profile.photos[0].value,
+          photo: profile.photos && profile.photos[0] ? profile.photos[0].value : null,
           accessToken,
           refreshToken
         };
